@@ -1,0 +1,65 @@
+{%- comment -%}
+  Accepts:
+  - product: {Object} Product Liquid object
+  - class: {String} Additional CSS classes for animation delays (optional)
+{%- endcomment -%}
+
+<article class="glass card {{ class }}">
+  <!-- Container height maintained so the grid doesn't break -->
+  <div class="shot" style="position: relative; height: 180px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px;">
+    
+    <!-- Edge Case 1: Sold Out Badge Logic -->
+    {%- if product.available == false -%}
+      <span class="pill" style="background: var(--text); color: var(--surface);">Sold out</span>
+    {%- elsif product.compare_at_price > product.price -%}
+      <span class="pill">Sale</span>
+    {%- else -%}
+      <span class="pill">Best seller</span>
+    {%- endif -%}
+
+    <!-- Edge Case 2: No Image Logic -->
+    {%- if product.featured_image -%}
+      <!-- Shrink-wrapped bounding box applied to max-width and max-height -->
+      <!-- PERFORMANCE FIX: Added explicit dimensions and async decoding to prevent CLS layout thrashing -->
+      <img src="{{ product.featured_image | image_url: width: 400 }}" 
+           alt="{{ product.title | escape }}" 
+           width="120"
+           height="130"
+           decoding="async"
+           fetchpriority="high"
+           style="width: auto !important; height: auto !important; max-width: 120px !important; max-height: 130px !important; object-fit: contain !important; margin: 0 auto; display: block;" 
+           loading="eager">
+    {%- else -%}
+      <div style="width: 100%; height: 130px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <span style="font-size: 12px; font-weight: 500; opacity: 0.6; color: var(--surface);">No Image</span>
+      </div>
+    {%- endif -%}
+  </div>
+  
+  <!-- Edge Case 3: Long Title Truncation -->
+  <h4 title="{{ product.title | escape }}">{{ product.title | truncate: 45 }}</h4>
+  
+  <!-- Note: Reviews are static because Dawn has no native review system built-in -->
+  <div class="rate"><b>★ 4.8</b> · 237 reviews</div>
+  
+  <div class="pr">
+    <strong>{{ product.price | money_without_trailing_zeros }}</strong>
+    {%- if product.compare_at_price > product.price -%}
+      <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+      {%- assign discount = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
+      <em>{{ discount }}% off</em>
+    {%- endif -%}
+  </div>
+  
+  <!-- Real Shopify Add to Cart Form -->
+  {%- form 'product', product -%}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <button type="submit" class="btn btn-ghost btn-sm" {% unless product.available %}disabled style="opacity: 0.5; cursor: not-allowed;"{% endunless %}>
+      {%- if product.available -%}
+        Add to cart
+      {%- else -%}
+        Sold out
+      {%- endif -%}
+    </button>
+  {%- endform -%}
+</article>
