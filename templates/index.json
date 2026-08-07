@@ -1,11 +1,209 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "blocks": {
+        "badge_C3FVmR": {
+          "type": "badge",
+          "settings": {
+            "builtin_icon": "plant",
+            "title": "Plant powered"
+          }
+        },
+        "badge_djUrKM": {
+          "type": "badge",
+          "settings": {
+            "builtin_icon": "shield",
+            "title": "Safe for kids & pets"
+          }
+        },
+        "badge_QFRNwg": {
+          "type": "badge",
+          "settings": {
+            "builtin_icon": "plant",
+            "title": "Zero harsh chemicals"
+          }
+        }
+      },
+      "block_order": [
+        "badge_C3FVmR",
+        "badge_djUrKM",
+        "badge_QFRNwg"
+      ],
+      "settings": {
+        "heading": "Clean<br>That<br><span class=\"lime\">Lasts</span>",
+        "description": "Homecare that works on the toughest grime, made from plants. Kind to your home, your family and the world outside it.",
+        "btn_label_1": "Shop now",
+        "btn_link_1": "shopify://collections/all",
+        "btn_label_2": "How it works",
+        "btn_link_2": "/",
+        "hero_product_1": "",
+        "hero_product_2": "",
+        "hero_product_3": "",
+        "bundle_2_price": 349,
+        "bundle_3_price": 499
+      }
+    },
+    "combos_f7qtdy": {
+      "type": "combos",
+      "blocks": {
+        "combo_card_KJF6ef": {
+          "type": "combo_card",
+          "settings": {
+            "title": "Kitchen essentials",
+            "description": "Includes: Foaming Kitchen Cleaner, Dishwash Gel & Tap Cleaner. Everything for a sparkling kitchen, no need to pick separately.",
+            "products": [
+              "organic-dishwash-liquid-gel",
+              "tap-cleaner-limescale-remover",
+              "copper-bronze-brass-cleaner"
+            ],
+            "bundle_price": 499,
+            "badge": "Most Popular"
+          }
+        },
+        "combo_card_Pjc3de": {
+          "type": "combo_card",
+          "settings": {
+            "title": "Laundry care bundle",
+            "description": "Includes: Laundry Detergent, Fabric Conditioner & Machine Cleaner Powder. Softer, fresher wash, all in one box.",
+            "products": [
+              "non-toxic-laundry-detergent",
+              "purelane-natural-herbal-floor-cleaner",
+              "washing-machine-cleaner-descaler"
+            ],
+            "bundle_price": 499,
+            "badge": ""
+          }
+        },
+        "combo_card_JMQxAg": {
+          "type": "combo_card",
+          "settings": {
+            "title": "Complete home bundle",
+            "description": "Kitchen Cleaner, Laundry Detergent, Floor Cleaner, Toilet Cleaner & Handwash. Our biggest saving box.",
+            "products": [
+              "copper-bronze-brass-cleaner",
+              "non-toxic-laundry-detergent",
+              "organic-dishwash-liquid-gel",
+              "purelane-magic-eraser",
+              "tap-cleaner-limescale-remover"
+            ],
+            "bundle_price": 799,
+            "badge": "Best Value"
+          }
+        },
+        "combo_card_UnxVbr": {
+          "type": "combo_card",
+          "settings": {
+            "title": "Bathroom deep clean",
+            "description": "Includes: Toilet Cleaner, Tap Cleaner & Magic Eraser. A complete bathroom refresh in one box.",
+            "products": [
+              "tap-cleaner-limescale-remover",
+              "purelane-magic-eraser",
+              "washing-machine-cleaner-descaler"
+            ],
+            "bundle_price": 499,
+            "badge": ""
+          }
+        },
+        "combo_card_Encagd": {
+          "type": "combo_card",
+          "settings": {
+            "title": "Hard water solution kit",
+            "description": "Includes: Tap Cleaner & Toilet Cleaner. A quick, focused fix for hard water stains across the home.",
+            "products": [
+              "tap-cleaner-limescale-remover",
+              "non-toxic-laundry-detergent"
+            ],
+            "bundle_price": 349,
+            "badge": ""
+          }
+        }
+      },
+      "block_order": [
+        "combo_card_KJF6ef",
+        "combo_card_Pjc3de",
+        "combo_card_JMQxAg",
+        "combo_card_UnxVbr",
+        "combo_card_Encagd"
+      ],
+      "name": "Best-Selling Combos",
+      "settings": {
+        "kicker": "Pre-built to save you money",
+        "heading": "Best selling combos",
+        "description": "Swipe through the boxes people order most. Each one is already priced below buying the same products on their own.",
+        "swipe_cue": "Swipe for more combos",
+        "rail_note": "Tapping \"Shop bundle\" opens the bundle picker with these products already added. You can still swap anything before you pay."
+      }
+    },
+    "ingredients_qJeX6y": {
+      "type": "ingredients",
+      "blocks": {
+        "ingredient_BFYaXy": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Coconut",
+            "description": "Plant-derived cleansers that lift grease",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"50\" cy=\"62\" r=\"25\"></circle><path d=\"M31 53c9-6 29-6 38 0\" stroke=\"#f0a03c\"></path><path d=\"M41 63c4 8 14 8 18 0\" opacity=\".55\"></path><path d=\"M50 37V25\"></path><path d=\"M50 27C42 18 30 16 21 21c5 10 17 13 29 6Z\" stroke=\"#f0a03c\"></path><path d=\"M50 27c8-9 20-11 29-6-5 10-17 13-29 6Z\" stroke=\"#f0a03c\"></path></svg>"
+          }
+        },
+        "ingredient_Ujdzw7": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Orange peel",
+            "description": "Natural degreaser and fresh citrus lift",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"45\" cy=\"58\" r=\"23\"></circle><path d=\"M45 35v46M22 58h46\" opacity=\".4\"></path><path d=\"M29 42 61 74M61 42 29 74\" opacity=\".26\"></path><path d=\"M62 28c13-1 20 10 15 20-4 8-15 9-19 2\" stroke=\"#f0a03c\"></path><path d=\"M45 34c-3-8 2-15 10-16 1 9-3 15-10 16Z\" stroke=\"#f0a03c\"></path></svg>"
+          }
+        },
+        "ingredient_YNGGn6": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Soap nut",
+            "description": "A traditional plant foaming agent",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"36\" cy=\"66\" r=\"16\"></circle><circle cx=\"64\" cy=\"69\" r=\"14\"></circle><circle cx=\"50\" cy=\"43\" r=\"14\"></circle><path d=\"M50 29V17\"></path><path d=\"M50 21c-8-8-18-8-23-2 7 8 17 10 23 2Z\" stroke=\"#f0a03c\"></path><path d=\"M31 60a5 5 0 0 1 4-4\" opacity=\".6\"></path><path d=\"M46 38a5 5 0 0 1 4-4\" opacity=\".6\"></path></svg>"
+          }
+        },
+        "ingredient_rhV8LU": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Neem",
+            "description": "Time-tested antibacterial from the tree",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 82C36 66 58 44 82 20\" stroke=\"#f0a03c\"></path><path d=\"M27 73c-6-7-4-15 3-18 4 7 3 14-3 18Z\"></path><path d=\"M31 69c8-4 15 0 16 8-8 2-14-1-16-8Z\"></path><path d=\"M41 59c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M45 55c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M56 44c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M60 40c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M70 30c-5-7-3-15 4-18 3 7 2 14-4 18Z\"></path></svg>"
+          }
+        },
+        "ingredient_P36h7Y": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Lemongrass",
+            "description": "Clean fragrance with nothing synthetic",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\"><g fill=\"#ece6f7\" opacity=\".88\"><path d=\"M50 88C44 62 39 42 24 15c15 27 22 47 29 73Z\"></path><path d=\"M52 88C50 60 50 39 44 9c11 29 13 50 12 79Z\"></path><path d=\"M54 88C56 60 60 40 74 13c-11 28-15 48-16 75Z\"></path><path d=\"M56 88C60 64 68 48 86 27c-14 22-21 38-26 61Z\"></path><path d=\"M48 88C44 66 36 50 18 30c14 21 22 36 27 58Z\"></path></g><path d=\"M50 88h6\" stroke=\"#f0a03c\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_BFYaXy",
+        "ingredient_Ujdzw7",
+        "ingredient_YNGGn6",
+        "ingredient_rhV8LU",
+        "ingredient_P36h7Y"
+      ],
+      "name": "Ingredients",
+      "settings": {
+        "heading": "Sourced from nature"
+      }
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "combos_f7qtdy",
+    "ingredients_qJeX6y"
   ]
 }
