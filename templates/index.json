@@ -199,11 +199,76 @@
       "settings": {
         "heading": "Sourced from nature"
       }
+    },
+    "bundles_7yWgYk": {
+      "type": "bundles",
+      "blocks": {
+        "tier_NWfG7R": {
+          "type": "tier",
+          "settings": {
+            "tag": "Starter",
+            "is_best_seller": false,
+            "product_count": 2,
+            "price": 349,
+            "compare_at_price": 598,
+            "per_product_text": "Flat ₹174 per product",
+            "button_label": "Build this box",
+            "button_link": "",
+            "feature_1": "Pick any two products",
+            "feature_2": "Free shipping across India",
+            "feature_3": ""
+          }
+        },
+        "tier_FNhDz9": {
+          "type": "tier",
+          "settings": {
+            "tag": "Most popular",
+            "is_best_seller": true,
+            "product_count": 3,
+            "price": 499,
+            "compare_at_price": 897,
+            "per_product_text": "Flat ₹166 per product",
+            "button_label": "Build this box",
+            "button_link": "",
+            "feature_1": "Pick any three products",
+            "feature_2": "Covers kitchen and laundry",
+            "feature_3": "Free shipping across India"
+          }
+        },
+        "tier_HF8VJT": {
+          "type": "tier",
+          "settings": {
+            "tag": "Whole home",
+            "is_best_seller": false,
+            "product_count": 5,
+            "price": 799,
+            "compare_at_price": 1495,
+            "per_product_text": "Flat ₹160 per product",
+            "button_label": "Build this box",
+            "button_link": "",
+            "feature_1": "Pick any five products",
+            "feature_2": "Every room in one order",
+            "feature_3": "Free shipping across India"
+          }
+        }
+      },
+      "block_order": [
+        "tier_NWfG7R",
+        "tier_FNhDz9",
+        "tier_HF8VJT"
+      ],
+      "name": "Bundles",
+      "settings": {
+        "kicker": "Build your bundle",
+        "heading": "One box. Every room.",
+        "description": "Mix and match across kitchen, laundry, home and skin. One flat price, no code needed, free shipping either way."
+      }
     }
   },
   "order": [
     "hero",
     "combos_f7qtdy",
-    "ingredients_qJeX6y"
+    "ingredients_qJeX6y",
+    "bundles_7yWgYk"
   ]
 }
