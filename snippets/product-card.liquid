@@ -2,7 +2,13 @@
   Accepts:
   - product: {Object} Product Liquid object
   - class: {String} Additional CSS classes for animation delays (optional)
+  - index: {Number} Loop index for lazy loading logic (optional)
 {%- endcomment -%}
+
+{%- assign is_eager = false -%}
+{%- if forloop.index <= 4 or index <= 4 -%}
+  {%- assign is_eager = true -%}
+{%- endif -%}
 
 <article class="glass card {{ class }}">
   <!-- Container height maintained so the grid doesn't break -->
@@ -20,15 +26,15 @@
     <!-- Edge Case 2: No Image Logic -->
     {%- if product.featured_image -%}
       <!-- Shrink-wrapped bounding box applied to max-width and max-height -->
-      <!-- PERFORMANCE FIX: Added explicit dimensions and async decoding to prevent CLS layout thrashing -->
+      <!-- PERFORMANCE FIX: Dynamic asset prioritization to save TTFB/bandwidth on below-the-fold images -->
       <img src="{{ product.featured_image | image_url: width: 400 }}" 
            alt="{{ product.title | escape }}" 
            width="120"
            height="130"
            decoding="async"
-           fetchpriority="high"
+           fetchpriority="{% if is_eager %}high{% else %}low{% endif %}"
            style="width: auto !important; height: auto !important; max-width: 120px !important; max-height: 130px !important; object-fit: contain !important; margin: 0 auto; display: block;" 
-           loading="eager">
+           loading="{% if is_eager %}eager{% else %}lazy{% endif %}">
     {%- else -%}
       <div style="width: 100%; height: 130px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 8px;">
         <span style="font-size: 12px; font-weight: 500; opacity: 0.6; color: var(--surface);">No Image</span>

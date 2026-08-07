@@ -8,7 +8,7 @@
         <div class="badge" {{ block.shopify_attributes }}>
           <span class="bi">
             {%- if block.settings.custom_icon != blank -%}
-              {{ block.settings.custom_icon | image_url: width: 40 | image_tag: loading: 'lazy' }}
+              {{ block.settings.custom_icon | image_url: width: 40 | image_tag: loading: 'eager', fetchpriority: 'high' }}
             {%- else -%}
               {%- case block.settings.builtin_icon -%}
                 {%- when 'plant' -%}
@@ -48,7 +48,7 @@
         {%- for block in section.blocks limit: 3 -%}
           <div class="glass-2">
             {%- if block.settings.custom_icon != blank -%}
-              {{ block.settings.custom_icon | image_url: width: 32 | image_tag: loading: 'lazy', style: 'width: 18px; height: 18px; margin: 0 auto 6px;' }}
+              {{ block.settings.custom_icon | image_url: width: 32 | image_tag: loading: 'eager', fetchpriority: 'high', style: 'width: 18px; height: 18px; margin: 0 auto 6px;' }}
             {%- else -%}
               {%- case block.settings.builtin_icon -%}
                 {%- when 'plant' -%}
@@ -154,7 +154,45 @@
     </div>
   </div>
 </section>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    const stage = document.getElementById('heroProd');
+    const bottles = document.querySelectorAll('.hp');
+    if (!stage || bottles.length === 0) return;
 
+    let rect = stage.getBoundingClientRect();
+    let ticking = false;
+    let mouseX = 0, mouseY = 0;
+
+    // Cache geometry on resize instead of on every mouse move
+    window.addEventListener('resize', () => { 
+      rect = stage.getBoundingClientRect(); 
+    }, { passive: true });
+
+    bottles.forEach(b => b.style.transition = 'transform 0.15s ease-out');
+
+    stage.addEventListener('mousemove', function(e) {
+      mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+      mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+      
+      // Hardware-accelerated paint frame decoupling
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          bottles.forEach((b, index) => {
+            const depth = (index % 3 + 1) * 12;
+            b.style.transform = `translate3d(${mouseX * depth}px, ${mouseY * depth}px, 0)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    stage.addEventListener('mouseleave', () => {
+      bottles.forEach(b => b.style.transform = `translate3d(0, 0, 0)`);
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "Troopod Hero Section",

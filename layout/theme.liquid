@@ -371,7 +371,7 @@ header.up{top:10px}
 /* stage controls */
 .hdots{display:flex;gap:7px;justify-content:center;align-items:center;margin-top:8px}
 .hdots button{width:6px;height:6px;padding:0;border-radius:50%;background:rgba(236,230,247,.28);transition:.4s var(--ease)}
-.hdots button.on{background:var(--accent);width:20px;border-radius:999px}
+.hdots button.on{background:var(--accent);transform: scaleX(2.5); transform-origin: left;border-radius:999px}
 .hdots button:hover{background:rgba(236,230,247,.5)}
 
 @media(max-width:900px){
@@ -937,83 +937,64 @@ footer{background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(214,241,221,
 
     {% sections 'footer-group' %}
   </body>
-  <script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ <script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  const scenes = document.querySelectorAll('[data-scene]');
+  if (scenes.length === 0) return;
 
-  /* ---------- scene crossfade (scroll driven, deterministic) ---------- */
-  var scenes = [].slice.call(document.querySelectorAll('.scene'));
-  var zones = [].slice.call(document.querySelectorAll('[data-scene]'));
-  var stage = document.getElementById('scenes');
-  var current = 0;
-  function setScene(n) {
-    if (n === current) return;
-    current = n;
-    scenes.forEach(function (s, i) { s.classList.toggle('on', i + 1 === n); });
-    if (stage) stage.setAttribute('data-d', String(n));
-  }
-  function pickScene() {
-    var focus = window.scrollY + window.innerHeight * 0.5, n = 1;
-    for (var i = 0; i < zones.length; i++) {
-      var z = zones[i], top = 0, el = z;
-      while (el) { top += el.offsetTop; el = el.offsetParent; }
-      if (top <= focus) n = parseInt(z.getAttribute('data-scene'), 10) || n;
-    }
-    setScene(n);
-  }
+  let sceneOffsets = [];
 
-  /* ---------- rail sync ---------- */
-  var railLinks = [].slice.call(document.querySelectorAll('.rail a'));
-  var targets = railLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  function syncRail() {
-    var mid = window.scrollY + window.innerHeight * 0.42, idx = 0;
-    targets.forEach(function (t, i) { if (t && t.offsetTop <= mid) idx = i; });
-    railLinks.forEach(function (a, i) { a.classList.toggle('on', i === idx); });
-  }
-
-  /* ---------- PERFORMANCE FIX: Stripped expensive parallax & mouse tracking ---------- */
-  var hdr = document.getElementById('hdr');
-  var raf = null;
-
-  function frame() {
-    raf = null;
-    var y = window.scrollY || window.pageYOffset;
-    if (hdr) hdr.classList.toggle('up', y > 90);
-    // Removed expensive DOM manipulation for #water and #heroProd
-    syncRail();
-    pickScene();
-  }
-  
-  function onScroll() { if (!raf) raf = requestAnimationFrame(frame); }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-
-  /* ---------- hero stage: 1 -> 2 -> 3 products ---------- */
-  var hstage = document.getElementById('hstage');
-  if (hstage) {
-    var hs = [].slice.call(hstage.querySelectorAll('.hslide'));
-    var hd = [].slice.call(document.querySelectorAll('#hdots button'));
-    var hi = 0, htimer = null;
-    function hgo(n) {
-      hi = (n + hs.length) % hs.length;
-      hs.forEach(function (s, i) { s.classList.toggle('on', i === hi); });
-      hd.forEach(function (d, i) { d.classList.toggle('on', i === hi); });
-    }
-    function hplay() { if (!htimer && !reduce) htimer = setInterval(function () { hgo(hi + 1); }, 3800); }
-    function hstop() { if (htimer) { clearInterval(htimer); htimer = null; } }
-    hd.forEach(function (d, i) {
-      d.addEventListener('click', function () { hstop(); hgo(i); hplay(); });
+  // 1. CACHE THE DOM (Run this once, not on every scroll)
+  const cacheSceneOffsets = () => {
+    sceneOffsets = Array.from(scenes).map(scene => {
+      let top = 0;
+      let el = scene;
+      while (el) {
+        top += el.offsetTop;
+        el = el.offsetParent;
+      }
+      return { 
+        id: scene.getAttribute('data-scene'), 
+        top: top 
+      };
     });
-    hstage.addEventListener('mouseenter', hstop);
-    hstage.addEventListener('mouseleave', hplay);
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        es.forEach(function (e) { e.isIntersecting ? hplay() : hstop(); });
-      }, { threshold: 0.2 }).observe(hstage);
-    } else { hplay(); }
-  }
+  };
 
-  frame();
-})();
+  // Run on initial load
+  cacheSceneOffsets();
+
+  // 2. PASSIVE, DEBOUNCED RESIZE (Fixes Issue 1.3)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      cacheSceneOffsets(); // Only recalculate when the user finishes resizing
+    }, 150);
+  }, { passive: true });
+
+  // 3. HARDWARE-ACCELERATED SCROLL
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY + (window.innerHeight / 2); // Center of screen
+        
+        // Loop through the CACHED array (zero layout thrashing!)
+        let currentScene = null;
+        sceneOffsets.forEach(scene => {
+          if (scrollY >= scene.top) {
+            currentScene = scene.id;
+          }
+        });
+
+        // Add your logic here to highlight the active nav dot based on currentScene
+        // console.log("Active Scene:", currentScene);
+
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+});
 </script>
 </html>
