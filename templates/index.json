@@ -9,36 +9,37 @@
  */
 {
   "sections": {
-    "hero": {
+    "hero_mGYqcY": {
       "type": "hero",
       "blocks": {
-        "badge_C3FVmR": {
+        "badge_VCaHQj": {
           "type": "badge",
           "settings": {
             "builtin_icon": "plant",
             "title": "Plant powered"
           }
         },
-        "badge_djUrKM": {
+        "badge_Hnw37E": {
           "type": "badge",
           "settings": {
             "builtin_icon": "shield",
-            "title": "Safe for kids & pets"
+            "title": "safe for kids and pets"
           }
         },
-        "badge_QFRNwg": {
+        "badge_Xfxffp": {
           "type": "badge",
           "settings": {
-            "builtin_icon": "plant",
-            "title": "Zero harsh chemicals"
+            "builtin_icon": "prohibited",
+            "title": "zero harsh chemicals"
           }
         }
       },
       "block_order": [
-        "badge_C3FVmR",
-        "badge_djUrKM",
-        "badge_QFRNwg"
+        "badge_VCaHQj",
+        "badge_Hnw37E",
+        "badge_Xfxffp"
       ],
+      "name": "Troopod Hero Section",
       "settings": {
         "heading": "Clean<br>That<br><span class=\"lime\">Lasts</span>",
         "description": "Homecare that works on the toughest grime, made from plants. Kind to your home, your family and the world outside it.",
@@ -53,10 +54,129 @@
         "bundle_3_price": 499
       }
     },
-    "combos_f7qtdy": {
+    "reviews_38B7Gj": {
+      "type": "reviews",
+      "blocks": {
+        "review_LGzXet": {
+          "type": "review",
+          "settings": {
+            "title": "Works like a charm",
+            "body": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
+            "author": "Anita",
+            "product_tag": "Laundry detergent"
+          }
+        },
+        "review_NtYFte": {
+          "type": "review",
+          "settings": {
+            "title": "Best dishwash ever",
+            "body": "Our old dishwash left my help with dry, cracked skin. That stopped completely after we switched.",
+            "author": "Priya",
+            "product_tag": "Dishwash gel"
+          }
+        },
+        "review_wV93BQ": {
+          "type": "review",
+          "settings": {
+            "title": "Great product, great packaging",
+            "body": "Very soft on hands with a lovely fragrance, and it feels good to be using far less plastic.",
+            "author": "Sunita",
+            "product_tag": "Liquid handwash"
+          }
+        },
+        "review_Ac7Vqe": {
+          "type": "review",
+          "settings": {
+            "title": "Dog friendly",
+            "body": "We switched because chemical floor cleaners were setting off my dog's allergies. No reactions since.",
+            "author": "Rohit S.",
+            "product_tag": "Floor cleaner"
+          }
+        },
+        "review_cKFJhE": {
+          "type": "review",
+          "settings": {
+            "title": "Sparkling taps again",
+            "body": "Hard water had ruined our bathroom fittings. Two sprays and the scale wipes straight off, no scrubbing.",
+            "author": "Verified buyer",
+            "product_tag": "Tap cleaner"
+          }
+        }
+      },
+      "block_order": [
+        "review_LGzXet",
+        "review_NtYFte",
+        "review_wV93BQ",
+        "review_Ac7Vqe",
+        "review_cKFJhE"
+      ],
+      "name": "Customer Reviews Rail",
+      "settings": {
+        "kicker": "That's what they said",
+        "rating_text": "<b>4.8</b> from 8,000+ reviews",
+        "homes_text": "Loved by <b>12 lakh+</b> homes"
+      }
+    },
+    "ingredients_9reheV": {
+      "type": "ingredients",
+      "blocks": {
+        "ingredient_WJJmVy": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Coconut",
+            "description": "Plant-derived cleansers that lift grease",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"50\" cy=\"62\" r=\"25\"></circle><path d=\"M31 53c9-6 29-6 38 0\" stroke=\"#f0a03c\"></path><path d=\"M41 63c4 8 14 8 18 0\" opacity=\".55\"></path><path d=\"M50 37V25\"></path><path d=\"M50 27C42 18 30 16 21 21c5 10 17 13 29 6Z\" stroke=\"#f0a03c\"></path><path d=\"M50 27c8-9 20-11 29-6-5 10-17 13-29 6Z\" stroke=\"#f0a03c\"></path></svg>"
+          }
+        },
+        "ingredient_H9gaqT": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Orange peel",
+            "description": "Natural degreaser and fresh citrus lift",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"45\" cy=\"58\" r=\"23\"></circle><path d=\"M45 35v46M22 58h46\" opacity=\".4\"></path><path d=\"M29 42 61 74M61 42 29 74\" opacity=\".26\"></path><path d=\"M62 28c13-1 20 10 15 20-4 8-15 9-19 2\" stroke=\"#f0a03c\"></path><path d=\"M45 34c-3-8 2-15 10-16 1 9-3 15-10 16Z\" stroke=\"#f0a03c\"></path></svg>"
+          }
+        },
+        "ingredient_VGHx3U": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Soap nut",
+            "description": "A traditional plant foaming agent",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"36\" cy=\"66\" r=\"16\"></circle><circle cx=\"64\" cy=\"69\" r=\"14\"></circle><circle cx=\"50\" cy=\"43\" r=\"14\"></circle><path d=\"M50 29V17\"></path><path d=\"M50 21c-8-8-18-8-23-2 7 8 17 10 23 2Z\" stroke=\"#f0a03c\"></path><path d=\"M31 60a5 5 0 0 1 4-4\" opacity=\".6\"></path><path d=\"M46 38a5 5 0 0 1 4-4\" opacity=\".6\"></path></svg>"
+          }
+        },
+        "ingredient_iPBFiF": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Neem",
+            "description": "Time-tested antibacterial from the tree",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 82C36 66 58 44 82 20\" stroke=\"#f0a03c\"></path><path d=\"M27 73c-6-7-4-15 3-18 4 7 3 14-3 18Z\"></path><path d=\"M31 69c8-4 15 0 16 8-8 2-14-1-16-8Z\"></path><path d=\"M41 59c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M45 55c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M56 44c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M60 40c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M70 30c-5-7-3-15 4-18 3 7 2 14-4 18Z\"></path></svg>"
+          }
+        },
+        "ingredient_gCzLe7": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Lemongrass",
+            "description": "Clean fragrance with nothing synthetic",
+            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\"><g fill=\"#ece6f7\" opacity=\".88\"><path d=\"M50 88C44 62 39 42 24 15c15 27 22 47 29 73Z\"></path><path d=\"M52 88C50 60 50 39 44 9c11 29 13 50 12 79Z\"></path><path d=\"M54 88C56 60 60 40 74 13c-11 28-15 48-16 75Z\"></path><path d=\"M56 88C60 64 68 48 86 27c-14 22-21 38-26 61Z\"></path><path d=\"M48 88C44 66 36 50 18 30c14 21 22 36 27 58Z\"></path></g><path d=\"M50 88h6\" stroke=\"#f0a03c\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_WJJmVy",
+        "ingredient_H9gaqT",
+        "ingredient_VGHx3U",
+        "ingredient_iPBFiF",
+        "ingredient_gCzLe7"
+      ],
+      "name": "Ingredients",
+      "settings": {
+        "heading": "Sourced from nature"
+      }
+    },
+    "combos_jqmBHV": {
       "type": "combos",
       "blocks": {
-        "combo_card_KJF6ef": {
+        "combo_card_K9BtPW": {
           "type": "combo_card",
           "settings": {
             "title": "Kitchen essentials",
@@ -64,43 +184,43 @@
             "products": [
               "organic-dishwash-liquid-gel",
               "tap-cleaner-limescale-remover",
-              "copper-bronze-brass-cleaner"
+              "non-toxic-laundry-detergent"
             ],
             "bundle_price": 499,
             "badge": "Most Popular"
           }
         },
-        "combo_card_Pjc3de": {
+        "combo_card_iaCUVh": {
           "type": "combo_card",
           "settings": {
             "title": "Laundry care bundle",
             "description": "Includes: Laundry Detergent, Fabric Conditioner & Machine Cleaner Powder. Softer, fresher wash, all in one box.",
             "products": [
+              "washing-machine-cleaner-descaler",
               "non-toxic-laundry-detergent",
-              "purelane-natural-herbal-floor-cleaner",
-              "washing-machine-cleaner-descaler"
+              "tap-cleaner-limescale-remover"
             ],
             "bundle_price": 499,
             "badge": ""
           }
         },
-        "combo_card_JMQxAg": {
+        "combo_card_HAwpfp": {
           "type": "combo_card",
           "settings": {
             "title": "Complete home bundle",
-            "description": "Kitchen Cleaner, Laundry Detergent, Floor Cleaner, Toilet Cleaner & Handwash. Our biggest saving box.",
+            "description": "Includes: Kitchen Cleaner, Laundry Detergent, Floor Cleaner, Toilet Cleaner & Handwash. Our biggest saving box.",
             "products": [
               "copper-bronze-brass-cleaner",
               "non-toxic-laundry-detergent",
-              "organic-dishwash-liquid-gel",
               "purelane-magic-eraser",
-              "tap-cleaner-limescale-remover"
+              "organic-dishwash-liquid-gel",
+              "purelane-ultra-concentrated-plant-based-foaming-kitchen-cleaner-degreaser-with-essential-oils-500ml-family-pack"
             ],
             "bundle_price": 799,
             "badge": "Best Value"
           }
         },
-        "combo_card_UnxVbr": {
+        "combo_card_KitmtN": {
           "type": "combo_card",
           "settings": {
             "title": "Bathroom deep clean",
@@ -108,20 +228,20 @@
             "products": [
               "tap-cleaner-limescale-remover",
               "purelane-magic-eraser",
-              "washing-machine-cleaner-descaler"
+              "non-toxic-laundry-detergent"
             ],
             "bundle_price": 499,
             "badge": ""
           }
         },
-        "combo_card_Encagd": {
+        "combo_card_jkCaCB": {
           "type": "combo_card",
           "settings": {
             "title": "Hard water solution kit",
-            "description": "Includes: Tap Cleaner & Toilet Cleaner. A quick, focused fix for hard water stains across the home.",
+            "description": "Tap Cleaner & Toilet Cleaner. A quick, focused fix for hard water stains across the home.",
             "products": [
-              "tap-cleaner-limescale-remover",
-              "non-toxic-laundry-detergent"
+              "purelane-natural-herbal-floor-cleaner",
+              "tap-cleaner-limescale-remover"
             ],
             "bundle_price": 349,
             "badge": ""
@@ -129,11 +249,11 @@
         }
       },
       "block_order": [
-        "combo_card_KJF6ef",
-        "combo_card_Pjc3de",
-        "combo_card_JMQxAg",
-        "combo_card_UnxVbr",
-        "combo_card_Encagd"
+        "combo_card_K9BtPW",
+        "combo_card_iaCUVh",
+        "combo_card_HAwpfp",
+        "combo_card_KitmtN",
+        "combo_card_jkCaCB"
       ],
       "name": "Best-Selling Combos",
       "settings": {
@@ -144,70 +264,15 @@
         "rail_note": "Tapping \"Shop bundle\" opens the bundle picker with these products already added. You can still swap anything before you pay."
       }
     },
-    "ingredients_qJeX6y": {
-      "type": "ingredients",
+    "bundle_card_t9kRNL": {
+      "type": "bundle-card",
       "blocks": {
-        "ingredient_BFYaXy": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Coconut",
-            "description": "Plant-derived cleansers that lift grease",
-            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"50\" cy=\"62\" r=\"25\"></circle><path d=\"M31 53c9-6 29-6 38 0\" stroke=\"#f0a03c\"></path><path d=\"M41 63c4 8 14 8 18 0\" opacity=\".55\"></path><path d=\"M50 37V25\"></path><path d=\"M50 27C42 18 30 16 21 21c5 10 17 13 29 6Z\" stroke=\"#f0a03c\"></path><path d=\"M50 27c8-9 20-11 29-6-5 10-17 13-29 6Z\" stroke=\"#f0a03c\"></path></svg>"
-          }
-        },
-        "ingredient_Ujdzw7": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Orange peel",
-            "description": "Natural degreaser and fresh citrus lift",
-            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"45\" cy=\"58\" r=\"23\"></circle><path d=\"M45 35v46M22 58h46\" opacity=\".4\"></path><path d=\"M29 42 61 74M61 42 29 74\" opacity=\".26\"></path><path d=\"M62 28c13-1 20 10 15 20-4 8-15 9-19 2\" stroke=\"#f0a03c\"></path><path d=\"M45 34c-3-8 2-15 10-16 1 9-3 15-10 16Z\" stroke=\"#f0a03c\"></path></svg>"
-          }
-        },
-        "ingredient_YNGGn6": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Soap nut",
-            "description": "A traditional plant foaming agent",
-            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"36\" cy=\"66\" r=\"16\"></circle><circle cx=\"64\" cy=\"69\" r=\"14\"></circle><circle cx=\"50\" cy=\"43\" r=\"14\"></circle><path d=\"M50 29V17\"></path><path d=\"M50 21c-8-8-18-8-23-2 7 8 17 10 23 2Z\" stroke=\"#f0a03c\"></path><path d=\"M31 60a5 5 0 0 1 4-4\" opacity=\".6\"></path><path d=\"M46 38a5 5 0 0 1 4-4\" opacity=\".6\"></path></svg>"
-          }
-        },
-        "ingredient_rhV8LU": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Neem",
-            "description": "Time-tested antibacterial from the tree",
-            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"#ece6f7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 82C36 66 58 44 82 20\" stroke=\"#f0a03c\"></path><path d=\"M27 73c-6-7-4-15 3-18 4 7 3 14-3 18Z\"></path><path d=\"M31 69c8-4 15 0 16 8-8 2-14-1-16-8Z\"></path><path d=\"M41 59c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M45 55c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M56 44c-6-7-4-16 3-19 4 7 3 15-3 19Z\"></path><path d=\"M60 40c9-4 16 0 17 8-8 2-15-1-17-8Z\"></path><path d=\"M70 30c-5-7-3-15 4-18 3 7 2 14-4 18Z\"></path></svg>"
-          }
-        },
-        "ingredient_P36h7Y": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Lemongrass",
-            "description": "Clean fragrance with nothing synthetic",
-            "raw_svg": "<svg viewbox=\"0 0 100 100\" fill=\"none\"><g fill=\"#ece6f7\" opacity=\".88\"><path d=\"M50 88C44 62 39 42 24 15c15 27 22 47 29 73Z\"></path><path d=\"M52 88C50 60 50 39 44 9c11 29 13 50 12 79Z\"></path><path d=\"M54 88C56 60 60 40 74 13c-11 28-15 48-16 75Z\"></path><path d=\"M56 88C60 64 68 48 86 27c-14 22-21 38-26 61Z\"></path><path d=\"M48 88C44 66 36 50 18 30c14 21 22 36 27 58Z\"></path></g><path d=\"M50 88h6\" stroke=\"#f0a03c\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path></svg>"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_BFYaXy",
-        "ingredient_Ujdzw7",
-        "ingredient_YNGGn6",
-        "ingredient_rhV8LU",
-        "ingredient_P36h7Y"
-      ],
-      "name": "Ingredients",
-      "settings": {
-        "heading": "Sourced from nature"
-      }
-    },
-    "bundles_7yWgYk": {
-      "type": "bundles",
-      "blocks": {
-        "tier_NWfG7R": {
+        "tier_HRqNpt": {
           "type": "tier",
           "settings": {
             "tag": "Starter",
             "is_best_seller": false,
+            "tierpix_html": "<div class=\"tierpix\" aria-hidden=\"true\"><span class=\"pimg p-combo2\" role=\"img\" aria-label=\"Purelane tap cleaner and kitchen cleaner combo pack\"></span></div>",
             "product_count": 2,
             "price": 349,
             "compare_at_price": 598,
@@ -219,11 +284,12 @@
             "feature_3": ""
           }
         },
-        "tier_FNhDz9": {
+        "tier_DHamP7": {
           "type": "tier",
           "settings": {
             "tag": "Most popular",
             "is_best_seller": true,
+            "tierpix_html": "<div class=\"tierpix\" aria-hidden=\"true\">\n<span class=\"pimg p-kitchen\" role=\"img\" aria-label=\"Purelane foaming kitchen cleaner\"></span><span class=\"pimg p-tap\" role=\"img\" aria-label=\"Purelane tap cleaner and limescale remover\"></span><span class=\"pimg p-dish\" role=\"img\" aria-label=\"Purelane organic dishwash liquid gel\"></span>\n</div>",
             "product_count": 3,
             "price": 499,
             "compare_at_price": 897,
@@ -235,11 +301,12 @@
             "feature_3": "Free shipping across India"
           }
         },
-        "tier_HF8VJT": {
+        "tier_TxVz6D": {
           "type": "tier",
           "settings": {
             "tag": "Whole home",
             "is_best_seller": false,
+            "tierpix_html": "<div class=\"tierpix five\" aria-hidden=\"true\">\n<span class=\"pimg p-kitchen\" role=\"img\" aria-label=\"Purelane foaming kitchen cleaner\"></span><span class=\"pimg p-tap\" role=\"img\" aria-label=\"Purelane tap cleaner and limescale remover\"></span><span class=\"pimg p-floor\" role=\"img\" aria-label=\"Purelane natural herbal floor cleaner\"></span><span class=\"pimg p-toilet\" role=\"img\" aria-label=\"Purelane non-toxic toilet cleaner\"></span><span class=\"pimg p-laundry\" role=\"img\" aria-label=\"Purelane non-toxic laundry detergent\"></span>\n</div>",
             "product_count": 5,
             "price": 799,
             "compare_at_price": 1495,
@@ -253,9 +320,9 @@
         }
       },
       "block_order": [
-        "tier_NWfG7R",
-        "tier_FNhDz9",
-        "tier_HF8VJT"
+        "tier_HRqNpt",
+        "tier_DHamP7",
+        "tier_TxVz6D"
       ],
       "name": "Bundles",
       "settings": {
@@ -264,7 +331,7 @@
         "description": "Mix and match across kitchen, laundry, home and skin. One flat price, no code needed, free shipping either way."
       }
     },
-    "shop_grid_cFDEnQ": {
+    "shop_grid_BhX9Wx": {
       "type": "shop-grid",
       "name": "Troopod Shop Grid",
       "settings": {
@@ -273,77 +340,14 @@
         "collection": "frontpage",
         "products_to_show": 8
       }
-    },
-    "reviews_jhw6HL": {
-      "type": "reviews",
-      "blocks": {
-        "review_PRGfhK": {
-          "type": "review",
-          "settings": {
-            "title": "Works like a charm",
-            "body": "Finally an eco option that cleans as well as the chemical detergent I used for years, and it smells better.",
-            "author": "Anita",
-            "product_tag": "Laundry detergent"
-          }
-        },
-        "review_zyytKn": {
-          "type": "review",
-          "settings": {
-            "title": "Best dishwash ever",
-            "body": "Our old dishwash left my help with dry, cracked skin. That stopped completely after we switched.",
-            "author": "Priya",
-            "product_tag": "Dishwash gel"
-          }
-        },
-        "review_AJWX7L": {
-          "type": "review",
-          "settings": {
-            "title": "Great product, great packaging",
-            "body": "Very soft on hands with a lovely fragrance, and it feels good to be using far less plastic.",
-            "author": "Sunita",
-            "product_tag": "Liquid handwash"
-          }
-        },
-        "review_GW3Q4G": {
-          "type": "review",
-          "settings": {
-            "title": "Dog friendly",
-            "body": "We switched because chemical floor cleaners were setting off my dog's allergies. No reactions since.",
-            "author": "Rohit S.",
-            "product_tag": "Floor cleaner"
-          }
-        },
-        "review_ci6VTq": {
-          "type": "review",
-          "settings": {
-            "title": "Sparkling taps again",
-            "body": "Hard water had ruined our bathroom fittings. Two sprays and the scale wipes straight off, no scrubbing.",
-            "author": "Verified buyer",
-            "product_tag": "Tap cleaner"
-          }
-        }
-      },
-      "block_order": [
-        "review_PRGfhK",
-        "review_zyytKn",
-        "review_AJWX7L",
-        "review_GW3Q4G",
-        "review_ci6VTq"
-      ],
-      "name": "Customer Reviews Rail",
-      "settings": {
-        "kicker": "That's what they said",
-        "rating_text": "<b>4.8</b> from 8,000+ reviews",
-        "homes_text": "Loved by <b>12 lakh+</b> homes"
-      }
     }
   },
   "order": [
-    "hero",
-    "reviews_jhw6HL",
-    "ingredients_qJeX6y",
-    "combos_f7qtdy",
-    "bundles_7yWgYk",
-    "shop_grid_cFDEnQ"
+    "hero_mGYqcY",
+    "reviews_38B7Gj",
+    "ingredients_9reheV",
+    "combos_jqmBHV",
+    "bundle_card_t9kRNL",
+    "shop_grid_BhX9Wx"
   ]
 }
