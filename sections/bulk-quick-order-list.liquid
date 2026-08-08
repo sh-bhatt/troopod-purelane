@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
@@ -14,20 +13,3 @@
   }
 }
 {% endschema %}
-=======
-{{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
-
-<script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
-
-{% render 'quick-order-list', product: product, show_image: true, show_sku: true, is_modal: true %}
-
-{% schema %}
-{
-  "name": "t:sections.quick-order-list.name",
-  "limit": 1,
-  "enabled_on": {
-    "templates": ["product"]
-  }
-}
-{% endschema %}
->>>>>>> 33f55ebd30416abe4350a863f9af7bba0e7aee75
