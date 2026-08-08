@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+<<<<<<< HEAD
 {
   "type": "header",
   "name": "Header",
@@ -19,4 +20,18 @@
   "order": [
     "header"
   ]
+=======
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header"
+  ]
+>>>>>>> 33f55ebd30416abe4350a863f9af7bba0e7aee75
 }

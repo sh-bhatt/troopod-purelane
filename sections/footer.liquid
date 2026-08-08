@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%- comment -%}
   Footer Section
   Features: Dynamic block columns (Brand, Links, Contact) and automatic copyright year.
@@ -150,4 +151,158 @@
     ]
   }
 }
+=======
+{%- comment -%}
+  Footer Section
+  Features: Dynamic block columns (Brand, Links, Contact) and automatic copyright year.
+{%- endcomment -%}
+
+<footer data-scene="4">
+  <div class="wrap">
+    <div class="fgrid">
+      {%- for block in section.blocks -%}
+        <div class="fcol" {{ block.shopify_attributes }}>
+          
+          {%- case block.type -%}
+            {%- when 'brand_info' -%}
+              <a class="brand" href="{{ routes.root_url }}" style="margin-bottom:16px">
+                <span class="mark">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M12 21c0-6.5 3.5-11 8-12.5C20 15 16.5 20 12 21Z"/><path d="M12 21C12 14.5 8.5 10 4 8.5 4 15 7.5 20 12 21Z"/><path d="M12 21v-6"/></svg>
+                </span>
+                <span class="txt">
+                  <span class="n1">{{ shop.name }}</span>
+                  <span class="n2">{{ block.settings.tagline }}</span>
+                </span>
+              </a>
+              <p style="max-width:30ch">{{ block.settings.description }}</p>
+
+            {%- when 'link_list' -%}
+              {%- if block.settings.heading != blank -%}
+                <h5>{{ block.settings.heading }}</h5>
+              {%- endif -%}
+              {%- if block.settings.menu != blank -%}
+                {%- for link in block.settings.menu.links -%}
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                {%- endfor -%}
+              {%- endif -%}
+
+            {%- when 'contact_info' -%}
+              {%- if block.settings.heading != blank -%}
+                <h5>{{ block.settings.heading }}</h5>
+              {%- endif -%}
+              {%- if block.settings.email != blank -%}
+                <a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a>
+              {%- endif -%}
+              {%- if block.settings.phone != blank -%}
+                <a href="tel:{{ block.settings.phone }}">{{ block.settings.phone }}</a>
+              {%- endif -%}
+              {%- if block.settings.company_details != blank -%}
+                <p style="font-size:12px;color:rgba(236,230,247,.5);margin-top:8px;">{{ block.settings.company_details }}</p>
+              {%- endif -%}
+
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <!-- Bottom Utility Bar -->
+    <div class="fbot">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</span>
+      <span class="footer-legal-links">
+        {%- for link in section.settings.bottom_menu.links -%}
+          <a href="{{ link.url }}" style="margin-left: 12px;">{{ link.title }}</a>
+        {%- endfor -%}
+      </span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "bottom_menu",
+      "label": "Bottom Legal Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand_info",
+      "name": "Brand Info",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "Tagline",
+          "default": "Clean, simply"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Effective cleaning, powered by nature. Made for Indian homes since day one."
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "Navigation Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Shop"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "contact_info",
+      "name": "Contact Info",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Get in touch"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email Address",
+          "default": "hello@purelane.com"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone Number",
+          "default": "+91 9930 123 234"
+        },
+        {
+          "type": "textarea",
+          "id": "company_details",
+          "label": "Company Details",
+          "default": "Purelane Eco Products Pvt Ltd"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "brand_info" },
+      { "type": "link_list", "settings": { "heading": "Shop" } },
+      { "type": "link_list", "settings": { "heading": "About" } },
+      { "type": "contact_info" }
+    ]
+  }
+}
+>>>>>>> 33f55ebd30416abe4350a863f9af7bba0e7aee75
 {% endschema %}
